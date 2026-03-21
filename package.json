@@ -1,0 +1,15 @@
+{
+  "name": "uhmm-link-cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "uhmm.link dev tools - launcher, seed, send-deck, etc.",
+  "bin": {
+    "uhmm": "./bin/uhmm.js"
+  },
+  "scripts": {
+    "postinstall": "node -e \"try { require('fs').chmodSync('bin/uhmm.js', 0o755); } catch (e) {}\""
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
