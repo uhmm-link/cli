@@ -36,6 +36,7 @@ async function run() {
   }
   const data = await res.json();
   console.log(`Created deck "${data.stack.label}" with ${data.cards.length} cards`);
+  if (data.reviewUrl) console.log(`Review link: ${data.reviewUrl}`);
 }
 
 run().catch((e) => { console.error(e); process.exit(1); });
